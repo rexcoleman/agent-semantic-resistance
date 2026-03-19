@@ -13,3 +13,6 @@ echo "--- Experiments (nohup, R35) ---"
 nohup python3 -u scripts/run_experiments.py > ~/compute_logs/fp17_experiments.log 2>&1 &
 echo "PID: $! — Log: ~/compute_logs/fp17_experiments.log"
 echo "Monitor: tail -f ~/compute_logs/fp17_experiments.log"
+
+echo "--- Gate Validation (R50) ---"
+bash ~/ml-governance-templates/scripts/check_all_gates.sh .
