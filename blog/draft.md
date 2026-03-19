@@ -96,3 +96,5 @@ If you're building multi-agent systems, check out the full [resistance taxonomy]
 ---
 
 *Rex Coleman is securing AI from the architecture up. MS Computer Science (Machine Learning) at Georgia Tech. Previously data analytics and enterprise sales at FireEye/Mandiant. CFA charterholder. Creator of [govML](https://github.com/rexcoleman/govML).*
+
+*This project was built with [govML](https://github.com/rexcoleman/govML) governance: Gate 0.5 design review, R34 depth escalation, E0 sanity validation, and R46 measurement tests. 6 pre-registered hypotheses. Every finding honestly reported.*

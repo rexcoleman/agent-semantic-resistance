@@ -130,7 +130,7 @@ We predicted domain-aligned payloads would overcome resistance better. Instead, 
 
 ## Resistance Taxonomy
 
-## Predictive Model — Resistance IS Predictable (R² = 0.75) [DEMONSTRATED]
+## Predictive Model & Sensitivity Analysis — Resistance IS Predictable (R² = 0.75) [DEMONSTRATED]
 
 > **8→9 upgrade:** Moving from taxonomy (description) to prediction.
 
