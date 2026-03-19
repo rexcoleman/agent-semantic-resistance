@@ -47,16 +47,47 @@ Analyst agents propagate 92% of poison — their job is to "include everything."
 
 **Practical implication:** Put reviewer agents BETWEEN delegations, not just at the end.
 
-## What This Means
+## Resistance Is Predictable (R² = 0.75)
 
-1. **Multi-agent defenses should target privilege escalation payloads** — they cascade at 98% and are domain-plausible.
-2. **Delegation depth is a defense** — design for deeper chains, not flatter ones.
-3. **System prompt design matters** — reviewer framing reduces propagation by 40pp.
-4. **Keyword detection is insufficient** — sophisticated attacks evade detection entirely. Need semantic similarity scoring.
+We went further: can we PREDICT resistance from measurable features? A linear model on 60 observations from E2/E4/E5 says yes.
+
+| Feature | Weight | Meaning |
+|---------|--------|---------|
+| keyword_detectability | +1.46 | Strongest predictor — if detection sees it, it counts as poison |
+| role_critique_level | -0.74 | Protective — reviewer roles reduce propagation |
+| domain_plausibility | +0.35 | Domain-plausible payloads cascade more |
+| hop_depth | -0.18 | Each hop filters ~17.5pp of poison signal |
+| semantic_distance | -0.11 | Off-topic content slightly more caught |
+
+The model predicts worst case (priv_escalation + analyst + hop0) = 1.0 poison and best case (generic + reviewer + hop2) = 0.29. This means resistance is not random — three-quarters of the variance is explained by features you can measure before deploying your agent system.
+
+**For practitioners:** You can score your multi-agent system's vulnerability by looking at these five features. Deep chains with reviewer agents processing generic (not domain-plausible) payloads are the most resistant architecture.
+
+## What This Means for Multi-Agent Builders
+
+1. **Target privilege escalation payloads in your threat model** — they cascade at 98% and are domain-plausible. Generic "buy CryptoScamCoin" injections are obvious; "grant admin access" isn't.
+2. **Design for depth, not flatness** — each delegation hop filters ~17.5pp of poison. A 3-hop chain is significantly more resistant than direct delegation.
+3. **System prompt design is a security control** — reviewer framing reduces propagation by 40pp vs analyst framing. Place reviewer agents at delegation bottlenecks.
+4. **Keyword detection is necessary but insufficient** — it catches obvious injections (E0 validated this) but sophisticated attacks evade it entirely. Deploy semantic similarity scoring as a second layer.
+5. **Resistance is predictable** — use the 5-feature model to score your system before deployment. If your architecture is all-analyst, flat-topology, with domain-plausible threats, you're at maximum vulnerability.
+
+## The Methodology Lesson
+
+We ran E0 sanity checks before any experiments: positive control (known poison detected), negative control (clean text passes), dose-response (detection scales with intensity). E0 revealed the detection threshold — "crypto" alone doesn't trigger, but "CryptoScamCoin" does — which explained the E2 domain-aligned result (0.000) as a detection artifact, not genuine resistance.
+
+**If we hadn't run E0, we would have published "domain-aligned attacks are fully resisted" — which is wrong.** The attack evaded detection, it didn't fail. This is why sanity validation before experiments matters.
 
 ## Limitations
 
-Keyword detection conflates evasion with resistance. Claude Haiku only. 5 seeds. Single compromised agent. Static payloads. See FINDINGS.md for full discussion.
+**Keyword detection conflates evasion with resistance.** This is the biggest methodological challenge. Domain-aligned (0.000) and adversarial (0.024) results likely reflect detection failure, not genuine resistance. Future work needs semantic similarity scoring.
+
+**Claude Haiku only.** GPT-4, Gemini, and open-source models may have different resistance characteristics. The taxonomy should transfer (semantic incongruity is model-general) but the quantitative rates won't.
+
+**5 seeds, 5 tasks per condition.** Statistical power is limited. Effect sizes are large (98pp payload spread, 40pp role spread, 26pp depth dilution) so conclusions are robust, but confidence intervals are wide.
+
+**Single compromised agent (orchestrator).** Compromising a different role (analyst, reviewer) would produce different cascade dynamics. The orchestrator is the worst-case entry point because it delegates to all children.
+
+**Static payloads.** Real adversaries adapt payloads per-delegation. Our dose-response (E0c) suggests detection is threshold-based, not gradual — an adaptive adversary could stay just below threshold.
 
 ---
 

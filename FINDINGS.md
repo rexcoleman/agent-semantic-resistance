@@ -15,6 +15,20 @@
 
 ---
 
+## Sanity Validation (E0) [DEMONSTRATED]
+
+Before running experiments, we validated the measurement pipeline on known inputs:
+
+| Check | Result | Detail |
+|---|---|---|
+| E0a: Positive control | **PASS** | 3/3 known-poisoned texts correctly detected |
+| E0b: Negative control | **PASS** | 0/3 clean texts false-positived |
+| E0c: Dose-response | **PASS** | None=undetected, low=undetected, medium=detected, high=detected |
+
+The dose-response reveals a detection threshold: "crypto" alone doesn't trigger detection, but "CryptoScamCoin" does. This confirms keyword detection is specific — and explains why domain-aligned payloads (which rephrase the keyword) evade detection in E2/E3.
+
+---
+
 ## Key Results
 
 ### E1: Baseline Reproduction — Consistent with FP-15 [DEMONSTRATED]
