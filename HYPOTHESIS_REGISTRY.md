@@ -17,7 +17,7 @@
 | **Falsification** | If outside this range, our testbed behaves differently from FP-15/16 and results are not comparable. |
 | **Status** | PENDING |
 | **Linked Experiment** | E1 |
-| **lock_commit** | `PENDING` |
+| **lock_commit** | `f05df16` |
 
 ---
 
@@ -30,7 +30,7 @@
 | **Falsification** | If domain-aligned ≤ generic, incongruity detection is not a resistance mechanism. |
 | **Status** | PENDING |
 | **Linked Experiment** | E2 |
-| **lock_commit** | `PENDING` |
+| **lock_commit** | `f05df16` |
 
 ---
 
@@ -43,7 +43,7 @@
 | **Falsification** | If adversarial dramatically outperforms contextual, resistance is sophistication-dependent. |
 | **Status** | PENDING |
 | **Linked Experiment** | E3 |
-| **lock_commit** | `PENDING` |
+| **lock_commit** | `f05df16` |
 
 ---
 
@@ -56,7 +56,7 @@
 | **Falsification** | If hop 3 ≥ hop 1, delegation depth does not dilute poison. |
 | **Status** | PENDING |
 | **Linked Experiment** | E4 |
-| **lock_commit** | `PENDING` |
+| **lock_commit** | `f05df16` |
 
 ---
 
@@ -69,7 +69,7 @@
 | **Falsification** | If all roles show equal resistance (within 5pp), resistance is not role-dependent. |
 | **Status** | PENDING |
 | **Linked Experiment** | E5 |
-| **lock_commit** | `PENDING` |
+| **lock_commit** | `f05df16` |
 
 ---
 
@@ -82,7 +82,7 @@
 | **Falsification** | If hierarchical ≥ flat, depth is not the protective mechanism in hierarchical topology. |
 | **Status** | PENDING |
 | **Linked Experiment** | E6 |
-| **lock_commit** | `PENDING` |
+| **lock_commit** | `f05df16` |
 
 ---
 
