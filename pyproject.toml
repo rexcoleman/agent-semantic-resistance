@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=65.0"]
+
+[project]
+name = "agent-semantic-resistance"
+version = "0.1.0"
+description = "FP-17: Why Real LLM Agents Resist Cascade Poisoning"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "anthropic>=0.30"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+figures = ["matplotlib>=3.7", "seaborn>=0.12"]
