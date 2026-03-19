@@ -3,7 +3,7 @@
 > **Project:** FP-17 (Agent Semantic Resistance to Cascade Poisoning)
 > **Created:** 2026-03-19
 > **Status:** Pre-registered (6/6 hypotheses locked before Phase 1)
-> **Lock commit:** TO BE SET
+> **Lock commit:** `f05df16`
 > **Lock date:** 2026-03-19
 
 ---
