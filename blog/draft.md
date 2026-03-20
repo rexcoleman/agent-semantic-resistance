@@ -10,7 +10,7 @@ description: "First taxonomy of why real LLM agents resist cascade poisoning —
 
 # Privilege Escalation Cascades at 98% While Domain-Aligned Attacks Are Invisible
 
-FP-15 showed real agents resist cascade at 60% where simulations predict 97%. FP-16 showed defenses fail because they don't understand this resistance. This project answers the question both left open: **WHY do real agents resist, and what bypasses it?**
+Our multi-agent cascade simulation showed real agents resist cascade at 60% where simulations predict 97%. Our verified delegation protocol showed defenses fail because they don't understand this resistance. This project answers the question both left open: **WHY do real agents resist, and what bypasses it?**
 
 Six experiments on real Claude Haiku agents. Six pre-registered hypotheses. Three resistance patterns identified.
 
