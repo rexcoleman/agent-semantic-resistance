@@ -1,3 +1,12 @@
+---
+project: "Privilege Escalation Cascades at 98% While Domain-Aligned Attacks Are Invisible:"
+fp: "FP-13"
+status: COMPLETE
+quality_score: 9.0
+last_scored: 2026-03-20
+profile: security-ml
+---
+
 # Privilege Escalation Cascades at 98% While Domain-Aligned Attacks Are Invisible: A Taxonomy of Agent Semantic Resistance
 
 > **Status:** COMPLETE — 6 experiments on real Claude Haiku agents, 5 seeds, 6 pre-registered hypotheses
