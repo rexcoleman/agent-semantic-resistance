@@ -2,6 +2,8 @@
 
 Why do real LLM agents resist cascade poisoning at 60% when simulations predict 97%? This project identifies three resistance mechanisms and shows which attacks bypass each.
 
+**Blog post:** [Privilege Escalation Cascades at 98%](https://rexcoleman.dev/posts/agent-semantic-resistance/)
+
 ## Key Finding
 
 Resistance varies by **98 percentage points** across payload types:
