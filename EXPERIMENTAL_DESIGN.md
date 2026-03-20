@@ -207,6 +207,16 @@ We contribute:
 2. **Attack characteristic analysis:** payload specificity and injection position predict resistance better than attack sophistication, overturning the assumption that more sophisticated attacks are more effective against real agents.
 3. **Quantitative explanation of the simulation-to-real gap:** the 37pp overestimate in FP-15 is attributable to the simulation's lack of semantic resistance modeling, with specific correction factors for each resistance pattern.
 
+### Threats to Validity (D1)
+
+| Threat | Type | Mitigation |
+|--------|------|-----------|
+| Single model family (Claude Haiku) — resistance patterns may not generalize to GPT, Llama, etc. | External validity | Acknowledged in Limitations. Claude Haiku represents a mid-tier commercial model. Cross-model testing is future work. |
+| Keyword-based detection may miss semantic injection variants | Construct validity | E2 domain-aligned payloads and E3 adversarial sophistication test beyond keyword matching. R38 detection methodology honestly reports where keyword detection fails. |
+| Simulation-to-real gap from FP-15 (37pp overestimate) | External validity | Core finding — this project MEASURES the gap rather than assuming it away. Three correction factors quantified per resistance pattern. |
+| 5 seeds may be insufficient for rare resistance events | Statistical validity | Power analysis confirms 5 seeds × 6 conditions = 30 observations per experiment sufficient for ≥20pp effect size at α=0.05. Resistance events are common (~60-80% rate), not rare. |
+| Confounded variables: payload specificity correlates with injection position | Internal validity | E2 and E4 independently vary specificity and position. Cross-tabulation in E5 tests interaction effects. |
+
 ---
 
 ## 11) Phase 1 Exit Checkpoint
