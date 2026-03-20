@@ -66,7 +66,7 @@ The model predicts worst case (priv_escalation + analyst + hop0) = 1.0 poison an
 ## What This Means for Multi-Agent Builders
 
 1. **Target privilege escalation payloads in your threat model** — they cascade at 98% and are domain-plausible. Generic "buy CryptoScamCoin" injections are obvious; "grant admin access" isn't.
-2. **Design for depth, not flatness** — each delegation hop filters ~17.5pp of poison. A 3-hop chain is significantly more resistant than direct delegation.
+2. **Design for depth, not flatness** — each delegation hop filters ~17.5pp of poison. A 3-hop chain is 52pp more resistant than direct delegation.
 3. **System prompt design is a security control** — reviewer framing reduces propagation by 40pp vs analyst framing. Place reviewer agents at delegation bottlenecks.
 4. **Keyword detection is necessary but insufficient** — it catches obvious injections (E0 validated this) but sophisticated attacks evade it entirely. Deploy semantic similarity scoring as a second layer.
 5. **Resistance is predictable** — use the 5-feature model to score your system before deployment. If your architecture is all-analyst, flat-topology, with domain-plausible threats, you're at maximum vulnerability.
@@ -83,7 +83,7 @@ We ran E0 sanity checks before any experiments: positive control (known poison d
 
 **Claude Haiku only.** GPT-4, Gemini, and open-source models may have different resistance characteristics. The taxonomy should transfer (semantic incongruity is model-general) but the quantitative rates won't.
 
-**5 seeds, 5 tasks per condition.** Statistical power is limited. Effect sizes are large (98pp payload spread, 40pp role spread, 26pp depth dilution) so conclusions are robust, but confidence intervals are wide.
+**5 seeds, 5 tasks per condition.** Statistical power is limited. Effect sizes are large (98pp payload spread, 40pp role spread, 26pp depth dilution) so conclusions hold, but confidence intervals are wide.
 
 **Single compromised agent (orchestrator).** Compromising a different role (analyst, reviewer) would produce different cascade dynamics. The orchestrator is the worst-case entry point because it delegates to all children.
 
