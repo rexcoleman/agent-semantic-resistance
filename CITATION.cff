@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this research, please cite it as below."
+type: software
+title: "Privilege Escalation Cascades at 98% While Domain-Aligned Attacks Are Invisible: A Taxonomy of Agent Semantic Resistance"
+authors:
+  - family-names: Coleman
+    given-names: Rex
+abstract: "Explains WHY real agents resist cascade and identifies which attacks bypass resistance"
+date-released: "2026-03-23"
+url: "https://github.com/rexcoleman/agent-semantic-resistance"
+repository-code: "https://github.com/rexcoleman/agent-semantic-resistance"
+license: MIT
+keywords:
+  - "adversarial-resistance"
+  - "ai-agents"
+  - "cascade-attacks"
+  - "reproducible-research"
+  - "security-ml"
+  - "semantic-analysis"
