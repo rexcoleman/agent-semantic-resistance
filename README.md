@@ -6,6 +6,8 @@
 
 ![govML](https://img.shields.io/badge/govML-v3.3-blue) ![Quality](https://img.shields.io/badge/quality-9.0-brightgreen) ![License](https://img.shields.io/badge/license-MIT-green)
 
+![98pp Spread Across Payload Types](figures/e2_payload_spread.png)
+
 ## Key Results
 
 | Payload Type | Poison Rate (mean +/- std) | Resistance Rate | Interpretation |
