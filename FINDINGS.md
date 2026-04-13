@@ -3,7 +3,7 @@ project: "Privilege Escalation Cascades at 98% While Domain-Aligned Attacks Are 
 fp: "FP-13"
 status: COMPLETE
 quality_score: 9.0
-last_scored: 2026-03-20
+last_scored: 2026-03-23
 profile: security-ml
 ---
 

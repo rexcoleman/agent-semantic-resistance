@@ -3,7 +3,7 @@ title: "Privilege Escalation Cascades at 98% While Domain-Aligned Attacks Are In
 date: 2026-03-19
 format: technical
 tags: ["ai-security", "multi-agent", "cascade-resistance", "research"]
-audience_side: "Both"
+audience_side: "of-ai"
 image_count: 0
 description: "First taxonomy of why real LLM agents resist cascade poisoning — and which attacks bypass each resistance pattern."
 ---
